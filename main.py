@@ -3,7 +3,6 @@ Empresa = {
 "tipo": "Empresa Comercial",
 "ramo": "Controle de Estoque",
 "cidade": "São Paulo",
-"estado": "SP",
 "ano-fundacao": "2026",
 "telefone": "(11) 99686-8853",
 "email": "contatostocksync@gmail.com.br"
@@ -29,22 +28,32 @@ recursos = {
     "Veículos de entrega"
 }
 
+print(f"Nome: {Empresa['nome']}")
+print(f"Tipo: {Empresa['tipo']}")
+print(f"Ramo: {Empresa['ramo']}")
+print(f"Cidade/Estado da empresa: {Empresa['cidade']}")
+print(f"Ano de Fundação: {Empresa['ano-fundacao']}")
+print(f"Telefone para contato: {Empresa['telefone']}")
+print(f"E-mail da empresa: {Empresa['email']}")
+
+
 #Marcelo Rios
 
-prateleira_de_estoque = [
-    ["Arroz", 250, 30.00],
-    ["Feijão", 200, 25.00],
-    ["Macarrão", 67, 27.00]
-    ["Açúcar", 15, 16.00]
-    ["Café", 40, 36.00]
-    ["Óleo", 39, 14.00]
-    ["Farinha", 70, 27.00]
-    ["Sal", 99, 10.00]
+produtos = [
+    ["Arroz", 25.90, 10],
+    ["Feijão", 8.50, 15],
+    ["Macarrão", 5.20, 20],
+    ["Açúcar", 10.55, 30],
+    ["Café", 29.90, 40],
+    ["Óleo", 10.99, 30],
+    ["Farinha", 15.65, 25],
+    ["Sal", 10.50, 40]
 ]
 
-print(prateleira_de_estoque[0][0])
-print(prateleira_de_estoque[0][1])
-print(prateleira_de_estoque[0][2])
-        
+print(Empresa)
 
-
+for produto in produtos:
+    print(f"Nome: {produto[0]}")
+    print(f"Preço: {produto[1]:.2f}")
+    print(f"Quantidade: {produto[2]}")
+    print(" -------------- ")
