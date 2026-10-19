@@ -57,3 +57,58 @@ for produto in produtos:
     print(f"Preço: {produto[1]:.2f}")
     print(f"Quantidade: {produto[2]}")
     print(" -------------- ")
+
+    #pedro henryke da costa gomes
+
+    def iniciar():
+    print("Sistema StockSync iniciado!")
+
+
+def mostrar_produtos():
+    print("\n--- Produtos em Estoque ---")
+    print("Arroz - R$ 25,90 - Quantidade: 10")
+    print("Feijão - R$ 8,50 - Quantidade: 15")
+    print("Macarrão - R$ 5,20 - Quantidade: 20")
+    print("Café - R$ 29,90 - Quantidade: 40")
+
+
+def verificar():
+    print("Verificação de estoque iniciada!")
+
+
+def encerrar():
+    print("Sistema StockSync encerrado!")
+
+
+def menu():
+    print("\n===== STOCKSYNC =====")
+    print("1 - Iniciar sistema")
+    print("2 - Mostrar produtos")
+    print("3 - Verificar estoque")
+    print("4 - Encerrar")
+
+    opcao = input("Escolha uma opção: ").strip()
+
+    if opcao == "1":
+        iniciar()
+    elif opcao == "2":
+        mostrar_produtos()
+    elif opcao == "3":
+        verificar()
+    elif opcao == "4":
+        encerrar()
+        return False
+    else:
+        print("Opção inválida! Escolha de 1 a 4.")
+
+    return True
+
+
+def main():
+    while True:
+        if not menu():
+            break
+
+
+if __name__ == "__main__":
+    main
