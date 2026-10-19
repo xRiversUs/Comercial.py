@@ -61,7 +61,7 @@ for produto in produtos:
     #pedro henryke da costa gomes
 
     def iniciar():
-    print("Sistema StockSync iniciado!")
+      print("Sistema StockSync iniciado!")
 
 
 def mostrar_produtos():
