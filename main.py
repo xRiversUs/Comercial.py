@@ -50,6 +50,8 @@ produtos = [
     ["Sal", 10.50, 40]
 ]
 
+matriz_estoque = [produtos[i:i + 4] for i in range(0, len(produtos), 4)]
+
 print(Empresa)
 
 for produto in produtos:
@@ -58,18 +60,25 @@ for produto in produtos:
     print(f"Quantidade: {produto[2]}")
     print(" -------------- ")
 
-    #pedro henryke da costa gomes
-
-    def iniciar():
-      print("Sistema StockSync iniciado!")
+#pedro henrike da costa
+def iniciar():
+    print("Sistema StockSync iniciado!")
 
 
 def mostrar_produtos():
     print("\n--- Produtos em Estoque ---")
-    print("Arroz - R$ 25,90 - Quantidade: 10")
-    print("Feijão - R$ 8,50 - Quantidade: 15")
-    print("Macarrão - R$ 5,20 - Quantidade: 20")
-    print("Café - R$ 29,90 - Quantidade: 40")
+    for produto in produtos:
+        print(f"{produto[0]} - R$ {produto[1]:.2f} - Quantidade: {produto[2]}")
+
+
+def mostrar_matriz_estoque():
+    print("\n--- Matriz 2D do Estoque (Prateleiras) ---")
+    for indice_prateleira, prateleira in enumerate(matriz_estoque, start=1):
+        posicoes = [
+            f"Posição {indice_posicao}: {produto[0]} ({produto[2]} un.)"
+            for indice_posicao, produto in enumerate(prateleira, start=1)
+        ]
+        print(f"Prateleira {indice_prateleira} | " + " | ".join(posicoes))
 
 
 def verificar():
@@ -86,10 +95,13 @@ def menu():
     print("2 - Mostrar produtos")
     print("3 - Verificar estoque")
     print("4 - Encerrar")
+    print("5 - Mostrar matriz 2D do estoque")
 
     opcao = input("Escolha uma opção: ").strip()
 
-    if opcao == "1":
+    if not opcao:
+        print("Entrada vazia! Digite uma opção de 1 a 5.")
+    elif opcao == "1":
         iniciar()
     elif opcao == "2":
         mostrar_produtos()
@@ -98,8 +110,10 @@ def menu():
     elif opcao == "4":
         encerrar()
         return False
+    elif opcao == "5":
+        mostrar_matriz_estoque()
     else:
-        print("Opção inválida! Escolha de 1 a 4.")
+        print("Opção inválida! Escolha de 1 a 5.")
 
     return True
 
@@ -111,4 +125,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main
+    main()
+
+#breno nadal rossi
