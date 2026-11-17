@@ -34,14 +34,18 @@ recursos = {
 #Marcelo Rios
 
 produtos = [
-    ["Arroz", 25.90, 10],
-    ["Feijão", 8.50, 15],
-    ["Macarrão", 5.20, 20],
-    ["Açúcar", 10.55, 30],
-    ["Café", 20.90, 40],
-    ["Óleo", 10.99, 30],
-    ["Farinha", 15.65, 25],
-    ["Sal", 10.50, 40]
+    ["Arroz 5kg ", 36.20, 10],
+    ["Feijão 1kg ", 13.25, 15],
+    ["Macarrão 500g ", 4.99, 20],
+    ["Açúcar 1kg ", 6.55, 30],
+    ["Café 500g ", 19.99, 40],
+    ["Óleo 900ml ", 9.65, 30],
+    ["Farinha 1kg ", 5.65, 25],
+    ["Sal 1kg ", 1.57, 40],
+    ["Leite 1L ", 5.50, 30],
+    ["Manteiga 200g ", 12.90, 15],
+    ["Margarina 500g ", 8.50, 20],
+    ["Queijo 200g ", 12.00, 18]
 ]
 
 matriz_estoque = [produtos[i:i + 4] for i in range(0, len(produtos), 4)]
@@ -158,7 +162,7 @@ def menu():
     print("2 - Mostrar produtos")
     print("3 - Verificar estoque")
     print("4 - Encerrar o sistema")
-    print("5 - Mostrar estoque")
+    print("5 - Mostrar prateleira do estoque")  
     print("6 - Mostrar Painel consolidado")
 
     opcao = input("Escolha uma opção: ").strip()
