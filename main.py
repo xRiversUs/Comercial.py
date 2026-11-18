@@ -9,7 +9,7 @@ Empresa = {
 }
 
 produtos = {
-    "Arroz", "Feijão", "Macarrão", "Açucar", "Café", "Óleo", "Farinha", "Sal"
+    "Arroz", "Feijão", "Macarrão", "Açucar", "Café", "Óleo", "Farinha", "Sal", "Leite",  "Manteiga",  "Margarina", "Queijo"
 }
 
 funcionarios = {
@@ -44,7 +44,7 @@ produtos = [
     ["Sal 1kg ", 1.57, 40],
     ["Leite 1L ", 5.50, 30],
     ["Manteiga 200g ", 12.90, 15],
-    ["Margarina 500g ", 8.50, 20],
+    ["Margarina 500g ", 8.00, 20],
     ["Queijo 200g ", 12.00, 18]
 ]
 
